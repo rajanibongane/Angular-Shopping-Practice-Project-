@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h3>Shopping Cart</h3><hr>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"> Email address </label>
+                      <input formControlName="email" placeholder="Enter Your email address" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text"> Please enter valid Email address </div><br>
+                      <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email') && loginForm.invalid && loginForm.touched">*Email is required</span>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label"> Password </label>
+                      <input formControlName="password" placeholder="Enter Your password" type="password" class="form-control" id="exampleInputPassword1"><br>
+                      <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password') && loginForm.invalid && loginForm.touched">*Password is required</span>
+                    </div>
+                    
+                    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary"> Login </button>
+                  </form>
+                  <br>
+                  <a routerLink="/signup"> Don't have an account? Create Account </a>
+            </div>
+        </div>
+    </div>
+</div>

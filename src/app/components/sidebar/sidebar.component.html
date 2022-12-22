@@ -1,0 +1,30 @@
+<div id="viewport">
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <ul class="nav">
+      <li><br>
+        <!-- <a href="#">
+          <i class="zmdi zmdi-view-dashboard"></i>Wishlist
+        </a> -->
+      </li>
+      <li><br>
+        <a href="#" routerLink="/cart">
+          <i class="zmdi zmdi-link"></i>Cart
+          <strong class="text-danger">{{totalItemCart}}</strong>
+        </a>
+      </li>
+      <li><br>
+        <a href="#" routerLink="/wishlist">
+          <i class="zmdi zmdi-widgets"></i>Wishlist
+          <strong class="text-danger">{{totalItemWishlist}}</strong>
+        </a>
+      </li>
+      <li><br>
+        <a href="#" routerLink="/orders">
+          <i class="zmdi zmdi-widgets"></i>Orders
+          <strong class="text-danger">{{totalItemOrders}}</strong>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

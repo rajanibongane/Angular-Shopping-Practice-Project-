@@ -1,0 +1,35 @@
+.card{
+    text-align: center;
+    color: rgb(103, 103, 192);
+    border: 1px solid;
+    height: 60vh;
+    margin: 25px;
+    left: 24%;
+    padding: 25px;
+    top: 150px;
+    width: 50%;
+}.center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-45%);
+    text-align: center;
+    position: absolute;
+}
+.card-table{
+    width: 90%;
+    left: 15%;
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    /* background-clip: border-box; */
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+.center button{
+    background-color: rgb(103, 103, 192);
+    color: #fff;
+}

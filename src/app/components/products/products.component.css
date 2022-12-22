@@ -1,0 +1,65 @@
+.dropdown {
+    display: inline-block;
+    color: rgb(103, 103, 192);
+    height: 35px;
+    position: fixed;
+    margin-top: 60px;
+    margin-left: 94%;
+}
+.dropdown button{
+    background-color: rgb(232, 232, 238);
+    border:  rgb(232, 232, 238);
+    color: rgb(103, 103, 192);
+    height: 30px;
+    width: 60px;
+}
+  .dropdown-content {
+    margin-top: 5px;
+    display: none;
+    position: absolute;
+    width: 100px;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    display: block;
+    color: rgb(103, 103, 192);
+    padding: 5px;
+    text-decoration: none;
+  }
+  .dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color:  rgb(103, 103, 192);
+  }
+.row{
+    margin-top: 40px;
+    margin-left: 100px;
+}
+.itemdata{
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: ellipsis;
+    max-width: 100ch;
+}
+.card{
+    padding: 60px;
+    margin: 50px;
+    border: 1px solid  rgb(103, 103, 192);
+}
+.card img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3 ease-in-out;
+}
+.card button{
+    color: white;
+    background-color:  rgb(103, 103, 192);
+}
+.card img:hover{
+    transition: 0.3 ease-in-out;
+    transform: scale(1.1);
+}

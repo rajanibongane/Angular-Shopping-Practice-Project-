@@ -1,0 +1,41 @@
+{
+  "posts": [],
+  "signup": [
+    {
+      "name": "bongane",
+      "email": "bongane@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "name": "rajanib",
+      "email": "rajanib@gmail.com",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "name": "naeem",
+      "email": "naeem@gmail.com",
+      "password": "12345678",
+      "id": 4
+    },
+    {
+      "name": "saurabh",
+      "email": "saurabh@gmail.com",
+      "password": "12345",
+      "id": 5
+    },
+    {
+      "name": "rajani",
+      "email": "rajani@gmail.com",
+      "password": "12345",
+      "id": 6
+    },
+    {
+      "name": "rb",
+      "email": "rb@gmail.com",
+      "password": "12345",
+      "id": 7
+    }
+  ]
+}

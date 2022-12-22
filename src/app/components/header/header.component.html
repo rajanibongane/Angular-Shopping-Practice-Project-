@@ -1,0 +1,19 @@
+<nav class="nav">
+    <h1>Shopping cart</h1>
+    <div class="nav-search">
+        <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)"  placeholder="search products"/>
+        <button>Search</button>
+        <!-- <div class="dropdown">
+            <button >Filter</button>
+            <div class="dropdown-content">  
+            <a (click)="filter('electronics')">Fashion</a>
+            <a (click)="filter('electronics')">Electronics</a>
+            <a (click)="filter('jewelery')">Jwellery</a>
+            </div>
+          </div> -->
+    </div>
+    <ul>
+        <li><img src="assets/profile_logo.png" alt="" width="35" type="button">profile</li>
+        <li><button (click)="logout()">Log Out</button></li>
+    </ul>
+</nav>
