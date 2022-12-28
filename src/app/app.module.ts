@@ -17,6 +17,8 @@ import { FilterPipe } from './shared/filter.pipe';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { TrackComponent } from './components/track/track.component';
+import { NoPageComponent } from './no-page/no-page.component';
+import { HomeHeaderComponent } from './components/home-header/home-header.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { TrackComponent } from './components/track/track.component';
     FilterPipe,
     WishlistComponent,
     OrdersComponent,
-    TrackComponent
+    TrackComponent,
+    NoPageComponent,
+    HomeHeaderComponent
     
   ],
   imports: [

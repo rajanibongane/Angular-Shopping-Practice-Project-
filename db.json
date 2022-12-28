@@ -2,12 +2,6 @@
   "posts": [],
   "signup": [
     {
-      "name": "bongane",
-      "email": "bongane@gmail.com",
-      "password": "12345",
-      "id": 2
-    },
-    {
       "name": "rajanib",
       "email": "rajanib@gmail.com",
       "password": "12345",
@@ -30,12 +24,9 @@
       "email": "rajani@gmail.com",
       "password": "12345",
       "id": 6
-    },
-    {
-      "name": "rb",
-      "email": "rb@gmail.com",
-      "password": "12345",
-      "id": 7
     }
+  ],
+  "name": [
+    
   ]
 }

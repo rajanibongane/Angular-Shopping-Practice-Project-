@@ -9,8 +9,8 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  // products:any[];
-  productList:any;
+  products:any[];
+  productList:any[];
   public filterCategory : any;
 
   searchkey:string="";
@@ -21,6 +21,7 @@ export class ProductsComponent implements OnInit {
     this.api.getProduct().subscribe(res=>{
       this.productList=res;
       this.filterCategory = res;
+      // this.cartService.filter(this.filterCategory)
 
       this.productList.forEach((a:any)=>{
       if(a.category==="women's clothing" || a.category==="men's clothing"){
@@ -28,27 +29,42 @@ export class ProductsComponent implements OnInit {
       }
         Object.assign(a,{quantity:1,total:a.price});
       });
-    });
+     });
     this.cartService.search.subscribe((val:any)=>{
       this.searchkey = val;
     })
+
+    this.cartService.search.subscribe((category:any)=>{
+      this.searchkey = category;
+    })
+    // this.cartService.filter(this.filterCategory)
+    
   }
-  // savecart(){
-  //   localStorage.setItem('cart_item',JSON.stringify(this.products))
-  // }
+    filter(category:any){
+      this.filterCategory=this.productList.filter((a:any)=>{
+        if(a.category == category || category==''){
+        return a;
+        }
+      })
+    } 
+
+    // testFilterFun() {
+    //   let fCategory = localStorage.getItem('filterCatgory');
+    //   console.log("fCat ==> ", fCategory)
+    //   this.filterCategory=this.productList.filter((a:any)=>{
+    //     if(a.category == fCategory || fCategory==''){
+    //     return a;
+    //     }
+    //   })
+    // }
+
+
   addtoCart(item:any){
     this.cartService.addtoCart(item);
 
-    // this.cartService.savecart();
   }
   addtoWishlist(item:any){
     this.cartService.addtoWishlist(item);
   }
-  filter(category:string){
-    this.filterCategory=this.productList.filter((a:any)=>{
-      if(a.category == category || category==''){
-        return a;
-      }
-    })
-  }
+  
 }

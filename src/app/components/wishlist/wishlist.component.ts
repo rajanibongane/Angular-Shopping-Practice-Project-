@@ -14,7 +14,7 @@ export class WishlistComponent implements OnInit{
   ngOnInit(): void {
     this.cartService.getProductsWishlist().subscribe(res=>{
       this.products=res;
-      this.grandTotal = this.cartService.getTotalPrice();
+      this.grandTotal = this.cartService.getTotalPriceWishlist();
     })
   }
   removeItem(item:any){
@@ -24,7 +24,7 @@ export class WishlistComponent implements OnInit{
     this.cartService.removeAllWishlist();
   }
   getTotalprice(){
-    this.cartService.getTotalPrice();
+    this.cartService.getTotalPriceWishlist();
   }
 }
 

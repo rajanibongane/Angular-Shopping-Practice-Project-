@@ -1,7 +1,8 @@
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +12,10 @@ import { FormBuilder, FormGroup, Validator, Validators } from '@angular/forms';
 export class SignupComponent implements OnInit {
 
   public signupForm!: FormGroup;
-  constructor(private formBuilder: FormBuilder, private http:HttpClient, private router:Router){}
+  nameData:any;
+  name :any;
+  constructor(private formBuilder: FormBuilder, private http:HttpClient, private router:Router){
+  }
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
       name:['',Validators.required],
@@ -32,10 +36,14 @@ export class SignupComponent implements OnInit {
       alert("Something Went Wrong.")
     }
     )
-
   }
-  profileName(){
-    this.http.get<any>("http://localhost:4200")
-    localStorage.getItem('username');
+  getsignUp(){
+    this.http.post<any>("http://localhost:3000/name",this.signupForm.value.name)
+    .subscribe(res=>{
+      // this.http.post<any>("http://localhost:4200/signup",this.signupForm.value.name)
+        localStorage.setItem('name',JSON.stringify(this.signupForm.value.name))
+      
+    }
+    )
   }
-}
+  }     

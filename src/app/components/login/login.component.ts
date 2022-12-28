@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit{
       const user = res.find((a:any)=>{
         return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
        })
+
        if(user){
         alert("Login Successfull");
         this.http.post<any>("http://localhost:4200",this.loginForm.value)
@@ -41,6 +42,5 @@ export class LoginComponent implements OnInit{
       }
       )
   }
+  }
 
-
-}

@@ -1,11 +1,12 @@
 <div class="dropdown">
-    <button>Filter</button>
-    <div class="dropdown-content">  
-    <a (click)="filter('fashion')">Fashion</a>
-    <a (click)="filter('electronics')">Electronics</a>
-    <a (click)="filter('jewelery')">Jwellery</a>
+    <button> Filter
+        <div class="dropdown-content"> 
+        <a (click)="filter('fashion')">Fashion</a>
+        <a (click)="filter('electronics')">Electronics</a>
+        <a (click)="filter('jewelery')">Jwellery</a>
+        </div>
+    </button>
     </div>
-  </div>
 <div class="container">
     <div class="row">
         <ng-container *ngFor="let item of filterCategory | filter:searchkey:'title'">

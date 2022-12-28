@@ -6,16 +6,19 @@ import { AuthService } from './auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
-
+export class NoAuthGuard implements CanActivate {
   constructor(private auth:AuthService, private router:Router){}
 
   canActivate(){
     if(this.auth.IsLoggedIn()){
-      return true;
+      // this.router.canceledNavigationResolution = 'computed';
+      this.router.navigate(['home']);
+      alert("You have already logged In")
+      return false;
+      
     }
-    alert("You have not logged In")
-    this.router.navigate(['login']);
-    return false;
-    }
+    
+    return true;
+  }
+
 }

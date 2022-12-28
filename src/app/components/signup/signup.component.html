@@ -7,8 +7,8 @@
                 </div>
                 <form [formGroup]="signupForm" (ngSubmit)="signUp()">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Full Name</label>
-                        <input formControlName="name" placeholder="Enter Your Full Name" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputName" class="form-label">Full Name</label>
+                        <input formControlName="name" placeholder="Enter Your Full Name" type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
                         <span class="text-danger" *ngIf="signupForm.controls['name'].dirty && signupForm.hasError('required','name') && signupForm.invalid && signupForm.touched">*Name is required</span>
                       </div>
                     <div class="mb-3">
@@ -24,7 +24,7 @@
 
                     </div>
                     
-                    <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary">Submit</button>
+                    <button type="submit" (click)="getsignUp()" [disabled]="!signupForm.valid" class="btn btn-primary">Submit</button>
                   </form>
                   <br>
                   <a routerLink="/login">Already have an account? Login</a>
